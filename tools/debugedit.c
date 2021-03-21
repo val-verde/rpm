@@ -26,7 +26,11 @@
 #include <byteswap.h>
 #include <endian.h>
 #include <errno.h>
+#if __has_include(<error.h>)
 #include <error.h>
+#else
+#define error(...)
+#endif
 #include <limits.h>
 #include <string.h>
 #include <stdlib.h>

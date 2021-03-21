@@ -29,7 +29,11 @@
 #include <endian.h>
 #include <stdio.h>
 #include <stdlib.h>
+#if __has_include(<error.h>)
 #include <error.h>
+#else
+#define error(...)
+#endif
 #include <libelf.h>
 #include <gelf.h>
 

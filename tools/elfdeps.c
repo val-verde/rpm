@@ -5,7 +5,11 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <fcntl.h>
+#if __has_include(<error.h>)
 #include <error.h>
+#else
+#define error(...)
+#endif
 #include <errno.h>
 #include <popt.h>
 #include <gelf.h>
