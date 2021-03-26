@@ -39,7 +39,7 @@ endif
 endif
 
 
-librpmio_la_LDFLAGS = -version-info $(rpm_version_info)
+librpmio_la_LDFLAGS = -pthread -version-info $(rpm_version_info)
 librpmio_la_LIBADD = \
 	../misc/libmisc.la \
 	@WITH_NSS_LIB@ \
@@ -50,8 +50,7 @@ librpmio_la_LIBADD = \
 	@WITH_ZLIB_LIB@ \
 	@WITH_POPT_LIB@ \
 	@WITH_LZMA_LIB@ \
-	$(ZSTD_LIBS) \
-	-lpthread
+	$(ZSTD_LIBS)
 
 if WITH_INTERNAL_BEECRYPT
 librpmio_la_LIBADD += $(libbeecrypt_la)
