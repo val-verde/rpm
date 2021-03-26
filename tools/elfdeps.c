@@ -17,6 +17,14 @@
 #include <rpm/rpmstring.h>
 #include <rpm/argv.h>
 
+#ifndef SHT_GNU_verdef
+#define SHT_GNU_verdef         0x6ffffffd
+#endif
+
+#ifndef SHT_GNU_verneed
+#define SHT_GNU_verneed        0x6ffffffe
+#endif
+
 int filter_private = 0;
 int soname_only = 0;
 int fake_soname = 1;
