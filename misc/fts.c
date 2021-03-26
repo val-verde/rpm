@@ -62,7 +62,10 @@ static char sccsid[] = "@(#)fts.c	8.6 (Berkeley) 8/14/94";
 #   define dirfd(dirp)		-1
 #endif
 #if defined(__APPLE__)
-#   define __errno_location()	(__error())
+#   define __errno_location()  (__error())
+#endif
+#if defined(__ANDROID__)
+#   define __errno_location()	(__errno())
 #endif
 
 #include "system.h"
