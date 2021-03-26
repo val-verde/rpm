@@ -45,6 +45,45 @@
 #include <gelf.h>
 #include <dwarf.h>
 
+#ifndef R_68K_32
+#define R_68K_32 1
+#endif
+
+#ifndef R_ALPHA_REFLONG
+#define R_ALPHA_REFLONG 1
+#endif
+
+#ifndef R_IA64_SECREL32LSB
+#define R_IA64_SECREL32LSB 0x65
+#endif
+
+#ifndef R_390_32
+#define R_390_32 4
+#endif
+
+#ifndef R_PPC_UADDR32
+#define R_PPC_UADDR32 24
+#endif
+
+#ifndef R_PPC64_UADDR32
+#define R_PPC64_UADDR32 R_PPC_UADDR32
+#endif
+
+#ifndef R_PPC_ADDR32
+#define R_PPC_ADDR32 1
+#endif
+
+#ifndef R_PPC64_ADDR32
+#define R_PPC64_ADDR32 R_PPC_ADDR32
+#endif
+
+#ifndef R_SPARC_UA32
+#define R_SPARC_UA32 23
+#endif
+
+#ifndef R_SPARC_32
+#define R_SPARC_32 3
+#endif
 
 /* Unfortunately strtab manipulation functions were only officially added
    to elfutils libdw in 0.167.  Before that there were internal unsupported
