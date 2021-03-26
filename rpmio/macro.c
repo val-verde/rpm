@@ -16,7 +16,7 @@ extern int optind;
 #include <sched.h>
 #endif
 
-#if !defined(isblank)
+#if !defined(isblank) && !defined(__ANDROID__)
 #define	isblank(_c)	((_c) == ' ' || (_c) == '\t')
 #endif
 #define	iseol(_c)	((_c) == '\n' || (_c) == '\r')
